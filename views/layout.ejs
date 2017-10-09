@@ -36,7 +36,19 @@
   </head>
 
   <body>
-    <%- body %>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo left">Movies</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/movies/list">List</a></li>
+          <li><a href="/movies/add">Add</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <%- body %>
+    </div>
+
 
 
 
