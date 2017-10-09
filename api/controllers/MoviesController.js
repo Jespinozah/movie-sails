@@ -6,6 +6,12 @@
  */
 
 module.exports = {
-	
+		list: function(request, response) {
+			Movies.find({}).exec(function(error, movies){
+				if(error) {
+					response.send(500, {error :'Database Error'});
+				}
+				response.view('list', {movies:movies});
+			});
+		}
 };
-
