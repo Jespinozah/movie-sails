@@ -1,0 +1,21 @@
+<div class="col s12">
+  <a href="/movies/list" class="breadcrumb blue-text">Movies</a>
+  <a class="breadcrumb blue-text">Add</a>
+
+  <h3>Add movie</h3>
+    <form class="col s12" method="post" action="/movies/create">
+      <div class="row">
+        <div class="input-field col s12">
+          <label for="title">Title</label>
+          <input type="text" name="title">
+        </div>
+        <div class="input-field col s12">
+          <label for="body">body</label>
+          <input type="text" name="body">
+        </div>
+      </div>
+
+      <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+      </button>
+    </form>
+</div>
