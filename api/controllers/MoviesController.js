@@ -27,5 +27,14 @@ module.exports = {
 				}
 				response.redirect('movies/list');
 			});
+		},
+		delete: function(request, response) {
+			Movies.destroy({id: request.params.id}).exec(function(error){
+				if(error) {
+					response.send(500, {error :'Database Error'});
+				}
+				response.redirect('movies/list');
+			});
+			return false;
 		}
 };

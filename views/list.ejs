@@ -12,7 +12,13 @@
       <tr>
         <td><%= movie.id %></td>
         <td><%= movie.title %></td>
-        <td></td>
+        <td>
+          <form action="/movies/delete/<%= movie.id %>" method="post">
+            <button class="btn waves-effect waves-light" type="submit" name="action">
+              Delete
+            </button>
+          </form>
+        </td>
       </tr>
     <%})%>
   </tbody>
